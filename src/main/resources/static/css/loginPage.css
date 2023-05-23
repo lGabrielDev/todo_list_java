@@ -1,0 +1,188 @@
+/* ----------------------------------------------------------------------- Project Colors ----------------------------------------------------------------------- */
+:root{
+    --orange: #E65763;
+    --roxo: #37073D;
+    --redRemove: #E55662;
+    --greenCheck:#00838F;
+    --blueModify:#1E88E5;
+    --lightGrey:#212121b6;
+    --primaryButton: #2D3B55;
+    --secondaryButton: #E8E9EC;
+}
+
+
+
+/* ----------------------------------------------------------------------- Basic configuration - removing padding and margin ----------------------------------------------------------------------- */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: Helvetica;
+
+}
+
+
+
+/* ----------------------------------------------------------------------- Div pai de todas ----------------------------------------------------------------------- */
+.conteudoInteiro{
+    width: 100%;
+    height: 100%;
+    font-family: Helvetica;
+    font-weight: 500;
+    background-image: linear-gradient(to right, var(--orange), var(--roxo));
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.divPaiFormulario{
+    width: 500px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+
+/* ----------------------------------------------------------------------- Form ----------------------------------------------------------------------- */
+.formulario{
+    width: 90%;
+    height: 90%;
+    box-sizing: border-box;
+}
+
+/* ----------------------------------------------- "Success Created" Message ----------------------------------------------- */
+div.cadastradoComSucesso{
+    margin: 0;
+    border-radius: 8px 8px 0px 0px;
+    position: relative;
+    top: 7px;
+}
+
+/* ----------------------------------------------- Form Header ----------------------------------------------- */
+.formulario_header{
+    background-color: white;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 96%;
+    box-sizing: border-box;
+    border-radius: 8px 8px 0 0;
+}
+
+
+/* -------------------- Form Title -------------------- */
+.formularioTitle{
+    margin-bottom: 37px;
+    box-sizing: border-box;
+    color: var(--darkGrey);
+    font-weight: 600;
+    font-family: Helvetica;
+}
+
+
+
+
+/* ----------------- Fields - "Username" and "Password" ----------------- */
+.campo_input{
+    width: 90%;
+    color: var(--lightGrey);
+}
+
+
+/* --- Error message - If the "username" and/or "password" is/are invalid, this div will show --- */
+.mensagemErroLogin{
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 1px;
+}
+
+
+
+/* --- Forgot your password ---  */
+.campo_forgot{
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+/* ------------- Input ------------- */
+.campo_input > input {
+    width: 100%;
+    margin-bottom: 13px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid black;
+    padding-left: 2px;
+}
+
+
+input:focus{
+    outline: none;
+}
+
+
+
+
+/* ----------------------------------------------- Login and Register Buttons ----------------------------------------------- */
+.logarRegisterButtons{
+    height: 17%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 50px;
+}
+
+
+/* ---------- Lggin button ---------- */
+button.logarButton{
+    background-color: #2D3B55;
+    color: white;
+    width: 50%;
+    border-radius: 0;
+    border: none;
+    border-radius: 0 0 3% 0%;
+}
+
+
+
+span.logarButtonText{
+    font-size: 15px;
+    position: relative;
+    top: 4  px;
+}
+
+
+/* ---------- Register button ---------- */
+a.cadastrarButton{
+    width: 50%;
+    background-color: #E8E9EC;
+    color: var(--lightGrey);
+    border-radius: 0;
+    position: relative;
+    border: none;
+    border-radius: 0 0 0% 3%;
+}
+
+
+span.registerButtonText{
+    font-size: 15px;
+    position: relative;
+    top: 10px;
+}

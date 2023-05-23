@@ -1,0 +1,75 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS external -->
+    <link rel="stylesheet" href="./css/registerPage.css">
+    <title>Register Page</title>
+</head>
+<body>
+    <div class="conteudoInteiro">
+        <form class="formulario" action="/register" method="post" th:object="${usuario}">
+            <!-- Form content -->
+            <div class="formularioHeader">
+                <h2 class="registerTitle">Register Page</h2>
+                <div class="camposInput">
+                    <!-- username field -->
+                    <div class="campo divUsername">
+                        <ion-icon name="person-outline" class="iconsBonitinhos"></ion-icon>
+                        <!-- input -->
+                        <div class="inputAndMensagemDeErro">
+                            <input type="text" placeholder="Username" th:field="*{name}">
+                            <!-- mensagens de erro. Essas divs só vao aparecer se o campo for inputado errado. -->
+                            <div class="registerMensagemErro alert alert-warning"  th:if="${nameErro1 != null}" th:text="${nameErro1}"></div>
+                            <div class="registerMensagemErro alert alert-warning" th:if="${nameErro2 != null}" th:text="${nameErro2}"></div>
+                            <div class="registerMensagemErro alert alert-warning" th:if="${nameErro3 != null}" th:text="${nameErro3}"></div>
+                        </div>
+                    </div>
+
+                    <!-- email -->
+                    <div class="campo divEmail">
+                        <ion-icon name="mail-outline" class="iconsBonitinhos"></ion-icon>
+                        <!-- input -->
+                        <div class="inputAndMensagemDeErro">
+                            <input type="email" placeholder="Email" th:field="*{email}">
+                            <!-- mensagem de erro. Essa div só vai aparecer se o campo for inputado errado. -->
+                            <div class="registerMensagemErro alert alert-warning" th:if="${emailErro1 != null}" th:text="${emailErro1}"></div>
+                            <div class="registerMensagemErro alert alert-warning" th:if="${emailErro2 != null}" th:text="${emailErro2}"></div>
+                        </div>
+                        
+                    </div>
+
+                    <!-- password -->
+                    <div class="campo divPassword">
+                        <ion-icon name="key-outline" class="iconsBonitinhos"></ion-icon>
+                        <!-- input -->
+                        <div class="inputAndMensagemDeErro">
+                            <input type="password" placeholder="Password" th:field="*{password}">
+                            <!-- mensagem de erro. Essa div só vai aparecer se o campo for inputado errado. -->
+                            <div class="registerMensagemErro alert alert-warning" th:if="${passwordErro1 != null}" th:text="${passwordErro1}"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- "BACK" and "REGISTER" buttons-->
+            <div class="formularioBody">
+                <a href="/login" class="btn btn-primary voltarButton">
+                    <ion-icon name="arrow-back-circle-outline" class="voltarIcon"></ion-icon>
+                </a>
+                <button type="submit" class="btn btn-primary registerButton">
+                    <span class="registerButtonText">REGISTER</span>
+                </button>
+            </div>
+        </form>
+    </div>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <!-- Ion icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

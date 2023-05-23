@@ -1,0 +1,28 @@
+<!-- Thymeleaf Fragments -->
+
+<!-- MODAL - A view que vai usar esse fragment, é a page "edit_task.html" -->
+<div th:fragment="modalEditarFragment" class="modal fade" id="modalParaEditar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Aqui que controlamos o modal por completo -->
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 modalTitle" id="exampleModalLabel">Modify Task</h1>
+                <!-- "Xzinho" to close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="formulario_modal" th:action="@{/task/{id}/edit (id = ${taskParaEditar.getId()})}" method="post" th:object="${taskParaEditar}">
+                    <input type="text" class="formulario_input" th:value="${taskParaEditar.getName()}" th:field="*{name}">
+                    <!-- Div com mensagem de erro. Essa div só vai aparecer se o usuario desrespeitar alguma constraint -->
+                    <div class="alert alert-warning modalMensagemErro" th:if="${param.mensagemErro != null}" th:text="${param.mensagemErro}"></div>
+                    <!-- CLOSE and SUBMIT butons  -->
+                    <div class="editFormularioButtons">
+                        <a type="button" class="btn btn-primary editCloseButton" th:href="@{/home}">Close</a> <!-- voltamos para home page, sem editar nada-->
+                        <button type="submit" class="btn btn-primary editModifyButton">Save changes</button> 
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,487 @@
+/* ------------------------------------ Project Colors ------------------------------------ */
+:root{
+    --orange: #E65763;
+    --roxo: #37073D;
+    --redRemove: #E55662;
+    --greenCheck:#00838F;
+    --blueModify:#1E88E5;
+    --lightGrey:#212121b6;
+    --primaryButton: #2D3B55;
+    --secondaryButton: #E8E9EC;
+}
+
+
+
+
+
+/* ------------------------------------ Basic configuration - removing padding and margin ------------------------------------ */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+body{
+    font-family: Helvetica;
+    font-weight: 500;
+    background-image: linear-gradient(to right, var(--orange), var(--roxo));
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+
+
+
+/* ------------------------------------ Div pai de todas ------------------------------------ */
+div.paginaCompleta{
+    width: 500px;
+    height: 99%;
+    text-align: center;
+    padding-top: 30px;
+}
+
+
+
+
+
+/* ------------------------------------ Login information - Welcome message and "logout" button ------------------------------------ */
+.loginInformations{
+    display: flex;
+    flex: row;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0px 15px;
+    position: relative;
+    height: 56px;
+    color: var(--primaryButton);
+    position: relative;
+    top: -26px;
+}
+
+
+/* ------ Welcome message ------ */
+.usernameAndSmileFace{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+.usuarioLogado{
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+    color: pink;
+}
+
+
+.smileFace{
+    font-size: 31px;
+    margin-left: 9px;
+    color: var(--orange);
+    font-weight: bold;
+}
+
+
+/* ------ Logout icon ------ */
+.logoutIcon{
+    font-size: 50px;
+    position: absolute;
+    right: -1px;
+    top: -7px;
+    color: var(--orange);
+    transition: 1s;
+}
+
+.logoutIcon:hover{
+    cursor: pointer;
+    color: var(--roxo);
+}
+
+
+
+
+
+/* ------------------------------------ Header - All user tasks ------------------------------------ */
+
+/* ------ Div pai do Header ------ */
+div.header{
+    padding-top: 30px;
+    position: relative;
+}
+
+/* ------ Header Title ------ */
+.headerTitle{
+    padding-bottom: 34px;
+    color: pink;
+    font-size: 50px;
+}
+
+
+/* ------------------ Form - CREATE A NEW TASK ------------------ */
+form#formulario{
+    display: flex;
+    flex-direction: row;
+}
+
+/* ------ Input ------ */
+input#inputTask{
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    border: 1px solid var(--roxo);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--roxo);
+}
+
+
+input#inputTask::placeholder{
+    color:  #37073d8a;
+}
+
+
+input#inputTask:focus{
+    outline: none;
+}
+
+
+/* ------ Add button ------ */
+.addButton{
+    width: 70px;
+    cursor: pointer;
+    border: 1px solid var(--roxo);
+    background-color: white;
+    transition: 0.4s;
+    
+}
+
+
+.addButtonIcon{
+    font-size: 29px;
+    position: relative;
+    top: 4px;
+    color: var(--roxo);
+}
+
+
+.addButton:hover{
+    background-color: var(--roxo);
+
+    .addButtonIcon{
+        color: white
+    }
+}
+
+
+
+
+
+/* ------------------------------------ ERROR MESSAGE - if the user input something wrong, this message will show ------------------------------------ */
+
+div.mostrarErro{
+    margin-bottom: 8px;
+    padding: 6px;
+    border: 1px solid var(--roxo);
+    position: relative;
+    top: -1px;
+    border-radius: 0 0px 3px 3px;
+}
+
+div.mostrarErro span{
+    font-size: 18px;
+}
+
+
+
+
+/* ------------------------------------ List all TASKS ------------------------------------ */
+/* ------ Div pai de todas ------ */
+div.tasks{
+    padding-top: 30px;
+}
+
+
+/* ------ "TODO LIST" - Title ------ */
+h2.tasksTitle{
+    padding-bottom: 15px;
+    color: pink;
+}
+
+/* ------ ul with all tasks  ------ */
+.tasks ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+
+/* ----------------------------- each li, each task ----------------------------- */
+li{
+    list-style: none;
+    padding: 26px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 107%;
+    border-bottom: 2px solid var(--roxo);
+    background-color: white;
+    color: var(--roxo);
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    transition: 1s;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    left: -32px;
+}
+
+
+/* ------ task name ------ */
+span.texto{
+    box-sizing: border-box;
+    display: flex;
+    position: absolute;
+    left: 19px;
+    top: 14px;
+}
+
+
+/* ------------ icons - CHECK, MODIFY and DELETE ------------ */
+div.allIcons{
+    width: 96px;
+    height: 36px;
+    box-sizing: border-box;
+    position: absolute;
+    right: 5px;
+    top: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: absolute;
+}
+
+
+
+.iconsInterativos{
+    width: 25px;
+    height: 25px;
+    color: var(--roxo);
+    border-radius: 2px;
+    box-sizing: border-box;
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+
+/* ------ "CHECK" task icon ------ */
+.checkIcon{
+    position: absolute;
+    top: 4px;
+    left: 3px;
+}
+
+.checkIcon:hover{
+    background-color: var(--greenCheck);
+    color: white;
+}
+
+
+/* ------ "MODIFY" task icon ------ */
+a.modifyIconLink{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 33px;
+    top: 4px;
+    text-decoration: none;
+    border: none;
+}
+
+
+.modifyIcon{
+    width: 100%;
+    height: 100%;
+}
+
+
+.modifyIcon:hover{
+    background-color: var(--blueModify);
+    color: white;
+}
+
+
+
+/* ------ "DELETE" task icon ------ */
+a.removeIconLink{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 1px;
+    top: 4px;
+}
+
+ion-icon.deleteIcon{
+    width: 100%;
+    height: 100%;
+}
+
+.deleteIcon:hover{
+    background-color: var(--redRemove);
+    color: white;
+}
+
+
+
+
+
+/* ------------------------------------ MODEL - Edit Task ------------------------------------ */
+/* ------------ Div pai ------------ */
+.modal-content{
+    height: fit-content;
+}
+
+
+/* ------------ Modal Body ------------ */
+div.modal-body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: var(--roxo);
+    font-family: Helvetica;
+    font-weight: bold;
+}
+
+
+/* --------------------------------- Form --------------------------------- */
+form.formulario_modal{
+    box-sizing: border-box;
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* ------------ Input ------------ */
+input.formulario_input{
+    padding: 15px;
+    width: 100%;
+    height: 26%;
+    box-sizing: border-box;
+    background-color: white;
+    font-size: 18px;
+    color: var(--roxo);
+    font-weight: bold;
+    border: 1px solid rgba(116, 113, 113, 0.166);
+}
+
+input.formulario_input:focus{
+    outline: none;
+}
+
+
+
+/* ------------ ERROR Messsage ------------ */
+div.modalMensagemErro{
+    position: relative;
+    top: -6px;
+    border-radius: 0 0 3px 3px
+}
+
+
+
+/* ----------------- CLOSE and SAVE buttons ----------------- */
+.editFormularioButtons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+/* ----- CLOSE button ----- */
+a.editCloseButton{
+    background-color: var(--secondaryButton);
+    color: var(--primaryButton);
+    margin-right: 10px;
+    border: 1px solid var(--roxo);
+    transition: 0.3s;
+}
+
+
+a.editCloseButton:hover{
+    background-color: var(--redRemove);
+    border: 1px solid var(--roxo);
+}
+
+
+
+/* ----- SAVE CHANGES button ----- */
+button.editModifyButton{
+    background-color: var(--primaryButton);
+    color: var(--secondaryButton);
+    border: 1px solid var(--roxo);
+    transition: 0.3s;
+}
+
+button.editModifyButton:hover{
+    background-color: var(--greenCheck);
+    border: 1px solid var(--roxo);
+}
+
+
+
+/* ------------------------------------ Classes coringas. Vamos usá-las com JS. ------------------------------------ */
+
+/* ----- task complete ----- */
+.liTaskDone{
+    background-color: var(--roxo);
+    color: white;
+}
+
+.spanTaskDone{
+    text-decoration: line-through solid var(--greenCheck) 3px;
+}
+
+
+
+.iconTaskDone{
+    background-color: var(--roxo);
+    color: white;
+
+    .iconsInterativos{
+        background-color: var(--roxo);
+        color: white;
+    }
+
+    .modifyIcon:hover{
+        background-color: var(--blueModify);
+    }
+
+    .deleteIcon:hover{
+        background-color: var(--redRemove);
+    }
+
+}
+
+
+
+/* ----- hide a element ----- */
+.hideElement{
+    display: none;
+}

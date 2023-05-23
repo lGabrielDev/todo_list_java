@@ -1,0 +1,222 @@
+/* -------------------------------------------------- Project Colors -------------------------------------------------- */
+:root{
+    --orange: #E65763;
+    --roxo: #37073D;
+    --redRemove: #E55662;
+    --greenCheck:#00838F;
+    --blueModify:#1E88E5;
+    --lightGrey:#212121b6;
+    --primaryButton: #2D3B55;
+    --secondaryButton: #E8E9EC;
+}
+
+
+
+
+/* -------------------------------------------------- Basic configuration - removing padding and margin -------------------------------------------------- */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: Helvetica;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, var(--orange), var(--roxo));
+    box-sizing: border-box;
+    
+}
+
+
+
+
+/* ------------------------------------ Div pai de todas ------------------------------------ */
+.conteudoInteiro{
+    height: 400px;
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.formulario{
+    background-color: white;
+    width: 90%;
+    height: fit-content;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 2%;
+    position: relative;
+}
+
+
+
+
+/* ------------------------------------------ FORM ------------------------------------------ */
+/* ------------------------------- Form Header -------------------- */
+div.formularioHeader{
+    box-sizing: border-box;
+    width: 90%;
+    padding: 0px 30px;
+}
+
+
+/* ------------------------------- Form title -------------------- */
+.registerTitle{
+    margin: 25px 0; /* margin top and margin bottom*/
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+/* ------------------- Form fields - "Name", "Email" and "Password" ------------------- */
+.camposInput{
+    box-sizing: border-box;
+    margin-top: 50px;
+}
+
+
+.campo{
+    box-sizing: border-box;
+    margin-bottom: 19px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* ---- "Password" field ---- */
+.divPassword{
+    margin-bottom: 35px;
+}
+
+
+/* ----- input icon ----- */
+.iconAndInput{
+    display: flex;
+    flex-direction: row;
+}
+
+.iconsBonitinhos{
+    position: relative;
+    top: 3px;
+    margin-right: 7px;
+    color: #2D3B55;
+    font-size: 25px;
+}
+
+
+/* ---------------------- input ---------------------- */
+input{
+    width: 100%;
+    padding-left: 4px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid var(--roxo);
+}
+
+input:focus{
+    outline: none;
+}
+
+
+/* ---------- Error Messages  ---------- */
+.inputAndMensagemDeErro{
+    box-sizing: border-box;
+    width: 100%;
+}
+
+div.registerMensagemErro{
+    box-sizing: border-box;
+}
+
+
+
+
+/* ---------------------- "REGISTER" and "BACK" buttons ---------------------- */
+.formularioBody{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    position: relative;
+}
+
+
+.btn{
+    width: 50%;
+    border-radius: 0;
+    box-sizing: border-box;
+}
+
+
+/* ---------- All buttons ---------- */
+button.registerButton,
+a.voltarButton {
+    border-radius: 0;
+    position: relative;
+    padding: 17px;
+    border: none;
+    height: 53px;
+    box-sizing: border-box;
+}
+
+
+/* ---------- "BACK" button ---------- */
+a.voltarButton{
+    background-color: #E8E9EC;
+    color: #2D3B55;
+    border-radius: 0 0 0 3%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+a.voltarButton:hover {
+    background-color: var(--redRemove);
+}
+
+.voltarIcon{
+    font-size: 38px;
+    box-sizing: border-box;
+    position: relative;
+    top: 1px;
+}
+
+
+span.voltarButtonText{
+    position: relative;
+    top: 2px;
+}
+
+
+/* ---------- "REGISTER" button ---------- */
+button.registerButton{
+    background-color: #2D3B55;
+    border-radius: 0 0 3% 0;
+    font-size: 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+button.registerButton:hover{
+    background-color: var(--greenCheck);
+}
