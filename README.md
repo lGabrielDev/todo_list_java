@@ -33,11 +33,11 @@ In context, here we have a "Task" management application. The user will be able 
 The most important validation is that a user can only handle his own tasks. Not being allowed to access data of other users.
 
 <div class="validationImages">
-    <div class="images1" style="margin-bottom:20px;">
-        <img src="./readme_images/validation1.png" alt="validation image example"  height="340px" style="margin-right:20px">
-        <img src="./readme_images/validation2.png" alt="validation image example"  height="340px">
-        <img src="./readme_images/validation3.png" alt="validation image example"  height="340px" style="margin-right:20px">
-        <img src="./readme_images/validation4.png" alt="validation image example"  height="340px">
+    <div class="images1" style="margin-bottom:20px; display:flex; flex-direction:column">
+        <img src="./readme_images/validation1.png" alt="validation image example"  width="320px" height="320px" style="margin-bottom:25px">
+        <img src="./readme_images/validation2.png" alt="validation image example"  width="320px" height="320px" style="margin-bottom:25px">
+        <img src="./readme_images/validation3.png" alt="validation image example"  width="320px" height="320px" style="margin-bottom:25px">
+        <img src="./readme_images/validation4.png" alt="validation image example"  width="320px" height="320px" style="margin-bottom:25px">
     </div>
    
 </div>
@@ -126,7 +126,7 @@ spring.jpa.show-sql=true
 
     ```bash
     //clone the repository
-    git clone caminhoTal
+    git clone https://github.com/lGabrielDev/todo_list_java.git
     ```
 
 2. Run the application and access the action [`http://localhost:8080/login`](http://localhost:8080/login)
